@@ -5,3 +5,9 @@
 * {
 	-webkit-font-smoothing: subpixel-antialiased;
 }
+
+input,
+text-area,
+button {
+	@apply font-normal text-base;
+}

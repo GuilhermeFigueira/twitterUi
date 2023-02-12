@@ -5,7 +5,7 @@ interface TweetProps {
 
 export default function Tweet({ children, user }: TweetProps) {
 	return (
-		<div className="bg-white w-fit ">
+		<div className="">
 			<strong>{user}</strong>
 			<p>{children}</p>
 			<button>Like</button>

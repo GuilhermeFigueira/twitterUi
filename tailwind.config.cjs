@@ -2,9 +2,9 @@
 module.exports = {
 	content: ["./index.html", "./src/**/*.tsx"],
 	theme: {
-		fontFamily:{
-			"sans"
-		}
+		fontFamily: {
+			sans: ["Roboto", "sans-serif"],
+		},
 		extend: {
 			colors: {
 				"twitter-blue": "#1da1f2",
