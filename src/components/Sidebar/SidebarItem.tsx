@@ -1,15 +1,14 @@
-import Icon from "phosphor-react";
-
 interface ItemProps {
 	icon: JSX.Element;
 	children: string;
+	className?: string;
 }
 
-export default function SidebarItem({ icon, children }: ItemProps) {
+export default function SidebarItem({ className, icon, children }: ItemProps) {
 	return (
-		<div className="flex items-center text-xl">
-			<>{icon}</>
-			<h1 className="px-2">{children}</h1>
+		<div className="flex items-center font-bold gap-4">
+			<div className="text-3xl">{icon}</div>
+			<h1 className={`text-xl ${className} `}>{children}</h1>
 		</div>
 	);
 }

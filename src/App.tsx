@@ -1,4 +1,4 @@
-import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar/SidebarMenu";
 import Timeline from "./components/Timeline";
 import Tweet from "./components/Tweet";
 import "./styles/main.css";
