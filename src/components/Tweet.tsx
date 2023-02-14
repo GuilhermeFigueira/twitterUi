@@ -26,17 +26,17 @@ export default function Tweet({ children, userName, user }: TweetProps) {
 				<p className="line-">{children}</p>
 
 				<div className="flex gap-8 mt-3 child:flex child:items-center child:gap-2 child:text-sm child:text-[#89a2b8] hover:text-twitter-blue">
-					<button className="group">
+					<button className="hover:text-twitter-blue">
 						<ChatCircle />
 						20
 					</button>
 
-					<button>
+					<button className="hover:text-twitter-blue">
 						<ArrowsClockwise />
 						20
 					</button>
 
-					<button>
+					<button className="hover:text-twitter-blue">
 						<Heart />
 						20
 					</button>

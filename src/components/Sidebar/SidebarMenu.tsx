@@ -14,7 +14,7 @@ import SidebarItem from "./SidebarItem";
 export default function Sidebar() {
 	return (
 		<aside className="flex flex-col justify-between h-screen px-3">
-			<div className="flex flex-col">
+			<div className="flex flex-col gap-4">
 				<div className="py-5">
 					<TwitterLogo size={32} weight="fill" />
 				</div>
@@ -42,7 +42,7 @@ export default function Sidebar() {
 				</nav>
 				<button
 					type="button"
-					className="my-4 bg-twitter-blue rounded-full w-5/6 text-white text-lg font-black p-3 hover:brightness-90"
+					className="my-5 bg-twitter-blue rounded-full w-5/6 text-white text-lg font-black p-3 hover:brightness-90"
 				>
 					Tweetar
 				</button>
