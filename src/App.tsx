@@ -5,7 +5,7 @@ import "./styles/main.css";
 
 function App() {
 	return (
-		<div className="mx-auto my-0 max-w-[1000px] grid grid-cols-[300px_1fr]">
+		<div className="mx-auto my-0 max-w-[1100px] grid grid-cols-[300px_1fr]">
 			<Sidebar />
 			<Timeline />
 		</div>

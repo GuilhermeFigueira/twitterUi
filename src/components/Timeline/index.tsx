@@ -1,4 +1,5 @@
 import { Sparkle } from "phosphor-react";
+import Tweet from "../Tweet";
 
 export default function Timeline() {
 	return (
@@ -28,6 +29,18 @@ export default function Timeline() {
 				</button>
 			</form>
 			<div className="bg-[#f7f9fa] border-t-[1px] border-solid h-3" />
+			<Tweet userName={"Guilherme"} user={"@GuilhermeFigueira"}>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
+				esse repellendus ipsa quibusdam officia vero, molestiae vitae,
+				itaque recusandae at iure deserunt nemo nostrum voluptatibus
+				adipisci totam blanditiis ullam illo.
+			</Tweet>
+			<Tweet userName={"@FigueiraGuilherme"} user={"Figueira"}>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit
+				obcaecati quia eveniet ad maiores blanditiis, minima molestias
+				aliquam delectus officiis alias aperiam amet sunt voluptatum
+				modi quibusdam dicta asperiores fuga!
+			</Tweet>
 		</div>
 	);
 }
