@@ -1,12 +1,12 @@
 import { ArrowsClockwise, ChatCircle, Heart } from "phosphor-react";
 
 interface TweetProps {
-	children: string;
+	content: string;
 	userName: string;
 	user: string;
 }
 
-export default function Tweet({ children, userName, user }: TweetProps) {
+export default function Tweet({ content, userName, user }: TweetProps) {
 	return (
 		<a
 			href="#"
@@ -23,7 +23,7 @@ export default function Tweet({ children, userName, user }: TweetProps) {
 					<strong>{userName}</strong>
 					<span className="text-sm text-[#89a2b8]">{user}</span>
 				</div>
-				<p className="line-">{children}</p>
+				<p className="line-">{content}</p>
 
 				<div className="flex gap-8 mt-3 child:flex child:items-center child:gap-2 child:text-sm child:text-[#89a2b8] hover:text-twitter-blue">
 					<button className="hover:text-twitter-blue">
