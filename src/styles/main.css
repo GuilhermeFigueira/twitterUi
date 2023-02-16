@@ -11,3 +11,7 @@ text-area,
 button {
 	@apply font-normal text-base;
 }
+
+.active {
+	@apply text-twitter-blue;
+}

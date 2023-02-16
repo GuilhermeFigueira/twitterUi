@@ -10,6 +10,7 @@ import {
 	User,
 } from "phosphor-react";
 import SidebarItem from "./SidebarItem";
+import { NavLink } from "react-router-dom";
 
 export default function Sidebar() {
 	return (
@@ -19,17 +20,11 @@ export default function Sidebar() {
 					<TwitterLogo size={32} weight="fill" />
 				</div>
 				<nav className="flex flex-col gap-y-8">
-					<SidebarItem
-						className="text-twitter-blue"
-						icon={
-							<House
-								weight="fill"
-								className="text-twitter-blue"
-							/>
-						}
-					>
-						Home
-					</SidebarItem>
+					<NavLink to="/">
+						<SidebarItem icon={<House weight="fill" />}>
+							Home
+						</SidebarItem>
+					</NavLink>
 					<SidebarItem icon={<Hash />}>Explore</SidebarItem>
 					<SidebarItem icon={<Bell />}>Notifications</SidebarItem>
 					<SidebarItem icon={<Envelope />}>Messages</SidebarItem>
