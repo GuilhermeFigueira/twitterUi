@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import Header from "../../components/Header";
 import Tweet from "../../components/Tweet";
 
@@ -11,6 +11,17 @@ export default function Status() {
 
 		setAnswers([newAnswer, ...answers]);
 		setNewAnswer("");
+	}
+
+	function handleHotkeyDown(event: KeyboardEvent) {
+		if (
+			event.key === "Enter" &&
+			(event.ctrlKey || event.metaKey) &&
+			newAnswer !== ""
+		) {
+			setAnswers([newAnswer, ...answers]);
+			setNewAnswer("");
+		}
 	}
 
 	return (
@@ -37,6 +48,7 @@ export default function Status() {
 						id="tweet"
 						placeholder="Tweete sua resposta"
 						value={newAnswer}
+						onKeyDown={handleHotkeyDown}
 						onChange={(event) => setNewAnswer(event.target.value)}
 					/>
 				</label>

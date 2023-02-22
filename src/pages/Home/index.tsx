@@ -1,4 +1,4 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, KeyboardEvent, useState } from "react";
 import Header from "../../components/Header";
 import Tweet from "../../components/Tweet";
 
@@ -12,6 +12,17 @@ export default function Home() {
 
 		setTweets([newTweet, ...tweets]);
 		setNewTweet("");
+	}
+
+	function handleHotkeyDown(event: KeyboardEvent) {
+		if (
+			event.key === "Enter" &&
+			(event.ctrlKey || event.metaKey) &&
+			newTweet !== ""
+		) {
+			setTweets([newTweet, ...tweets]);
+			setNewTweet("");
+		}
 	}
 
 	return (
@@ -32,6 +43,7 @@ export default function Home() {
 						id="tweet"
 						value={newTweet}
 						placeholder="O que está acontecendo?"
+						onKeyDown={handleHotkeyDown}
 						onChange={(event) => {
 							setNewTweet(event.target.value);
 						}}
